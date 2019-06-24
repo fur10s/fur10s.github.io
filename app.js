@@ -11,8 +11,21 @@ for(var i=0; i<addToCartButtons.length; i++) {
 	});
 }
 
+var likeButtons = document.querySelectorAll('.like');
 
- $('div.like').click(function() {
-    $(this).toggleClass('changeColorLike');
+for (var i = 0; i<likeButtons.length; i++) {
+	console.log (this)
+	likeButtons[i].addEventListener('click', function() {
+		if (this.classList.contains('liked')) {
+			this.classList.remove('liked')
+		} else {
+			this.classList.add('liked')
+		}
+	})
+}
+
+//add slick 
+  $('.slider-block').slick({
+    dots: true,
+  	autoplay: true,
   });
-
